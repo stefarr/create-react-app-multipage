@@ -1,0 +1,4 @@
+historyApiFallback: {
+      disableDotRule: true,
+      index: paths.publicUrlOrPath,
+    },

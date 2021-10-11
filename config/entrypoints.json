@@ -1,0 +1,26 @@
+{
+    "files":{
+        "index": {
+            "folder": "/",
+            "js": "src/index",
+            "html": "public/index.html"
+        }, 
+        "other1": {
+            "folder": "/otherpage1",
+            "js": "src/otherpage1/indexother1",
+            "html": "public/other1.html"
+        },
+        "other2": {
+            "folder": "/otherpage2",
+            "js": "src/otherpage2/indexother2",
+            "html": "public/other2.html"
+        }
+
+    },
+    "profiles":{
+        "mainpage": ["index"],
+        "otherpage1": ["other1"],
+        "otherpage2": ["other2"],
+        "test": ["other1", "other2","index"]
+    }
+}

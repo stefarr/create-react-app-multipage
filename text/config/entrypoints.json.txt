@@ -1,0 +1,22 @@
+{
+    "files":{
+        "index": {
+            "folder": "/",
+            
+            "js": "src/index",
+            "html": "public/index.html"
+            
+        }, 
+        "other": {
+            "folder": "/otherpage",
+            
+            "js": "src/otherpage/index",
+            "html": "public/other1.html"
+        }
+    },
+    "profiles":{
+        "mainpage": ["index"],
+        "otherpage": ["other"],
+        "test": ["other", "index"]
+    }
+}

@@ -1,0 +1,20 @@
+      ...paths.getEntryPoints().map((m)=>{
+        return new ManifestPlugin({
+            fileName: `${m[0]}_asset_manifest.json`,
+            publicPath: paths.publicUrlOrPath,
+            generate: (seed, files, entrypoints) => {
+              const manifestFiles = files.reduce((manifest, file) => {
+                manifest[file.name] = file.path;
+                return manifest;
+            }, seed);
+            const entrypointFiles = Object.entries(entrypoints).find((f)=>f[0]===m[0])[1].filter(
+              fileName => !fileName.endsWith('.map')
+            );
+
+          return {
+            files: manifestFiles,
+            entrypoints: entrypointFiles,
+          };
+        },
+      })
+    }),

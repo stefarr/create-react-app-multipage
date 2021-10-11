@@ -1,0 +1,30 @@
+    plugins: [
+      ...paths.getWebPackPlugins().map((m) => {
+        return new HtmlWebpackPlugin(
+          Object.assign(
+            {},
+            {
+              inject: true,
+              chunks: [m.chunkname],
+              template: m.template,
+              filename: m.filename,
+            },
+            isEnvProduction
+              ? {
+                  minify: {
+                    removeComments: true,
+                    collapseWhitespace: true,
+                    removeRedundantAttributes: true,
+                    useShortDoctype: true,
+                    removeEmptyAttributes: true,
+                    removeStyleLinkTypeAttributes: true,
+                    keepClosingSlash: true,
+                    minifyJS: true,
+                    minifyCSS: true,
+                    minifyURLs: true,
+                  },
+                }
+              : undefined
+          )
+        );
+      }),

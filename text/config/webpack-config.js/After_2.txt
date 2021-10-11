@@ -1,0 +1,6 @@
+    output: {
+      path: isEnvProduction ? paths.appBuild : undefined,
+      pathinfo: isEnvDevelopment,
+      filename: isEnvProduction
+        ? 'static/js/[name].[contenthash:8].js'
+        : isEnvDevelopment && 'static/js/[name].bundle.js',

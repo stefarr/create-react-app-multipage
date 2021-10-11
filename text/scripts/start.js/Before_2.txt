@@ -1,0 +1,6 @@
+const urls = prepareUrls(
+      protocol,
+      HOST,
+      port,
+      paths.publicUrlOrPath.slice(0, -1)
+    );

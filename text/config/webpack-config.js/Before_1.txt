@@ -1,0 +1,6 @@
+    entry:
+      isEnvDevelopment && !shouldUseReactRefresh
+        ? [
+            webpackDevClientEntry,
+            paths.appIndexJs,
+          ]

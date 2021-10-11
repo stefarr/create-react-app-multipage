@@ -1,0 +1,24 @@
+    entry:
+      isEnvDevelopment  && !shouldUseReactRefresh
+       ? 
+          Object.assign(
+          {},
+          ...paths.getEntryPoints().map((m) => {
+            return {
+              [m[0]]: [
+                webpackDevClientEntry,
+                Object.entries(m[1]).find((e) => e[0] === "js")[1],
+              ],
+            };
+          })
+       ):
+          Object.assign(
+          {},
+          ...paths.getEntryPoints().map((m) => {
+              return {
+                [m[0]]: [
+                Object.entries(m[1]).find((e) => e[0] === "js")[1]
+                ],
+              };
+          })
+      ),

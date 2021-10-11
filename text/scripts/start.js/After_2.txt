@@ -1,0 +1,6 @@
+    const urls = prepareUrls(
+      protocol,
+      HOST,
+      port,
+      paths.getBrowserFolder()
+    );

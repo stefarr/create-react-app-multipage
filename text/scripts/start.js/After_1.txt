@@ -1,0 +1,4 @@
+
+if (!checkRequiredFiles(paths.getRequiredFiles())) {
+  process.exit(1);
+}
